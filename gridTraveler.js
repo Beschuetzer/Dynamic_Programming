@@ -23,7 +23,9 @@ function gridTravelerMemo(m, n, memo={}) {
     
     //create a unique key for each m/n permutation, used to represent that case
     const key = `${m},${n}`;
+    const keyInvers = `${n},${m}`;
     if (key in memo) return memo[key];
+    if (keyInvers in memo) return memo[keyInvers];
 
     memo[key] = gridTravelerMemo(m - 1, n, memo) + gridTravelerMemo(m, n - 1, memo);
     return memo[key];
@@ -33,4 +35,5 @@ console.log('gridTravelerMemo(2,3) =', gridTravelerMemo(2,3));
 console.log('gridTravelerMemo(3,3) =', gridTravelerMemo(3,3));
 console.log('gridTravelerMemo(6,8) =', gridTravelerMemo(6,8));
 console.log('gridTravelerMemo(4,5) =', gridTravelerMemo(4,5));
+console.log('gridTravelerMemo(18,18) =', gridTravelerMemo(18,18));
 console.log('gridTravelerMemo(700,90) =', gridTravelerMemo(700,90));
