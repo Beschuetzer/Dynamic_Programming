@@ -1,3 +1,15 @@
+//Combinatoric Problem
+//m = targetSum
+//n = number.length
+
+//Brute Force:
+//time: O(n^m)
+//space: O(m)
+
+//Memoized version:
+//time: O(n*m)
+//space: O(m)
+
 //write a fn canSum(targetSum, numberArray) that takes in a targetSum and an array of numbers and returns a boolean indicating whether or not it is possible to create the targetSum using any combination of the number any number of times.  All inputs are assumed to be non-negative 
 function canSum(targetSum, numbers) {
     if (targetSum === 0) return true;
