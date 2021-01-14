@@ -23,7 +23,8 @@ function canConstructTabulation(targetStr, wordBank) {
     return table[targetStr.length];
 }
 
-
+//Time O(m^2*n)
+//Space O(m)
 
 console.log(canConstructTabulation('alimony', ['ali','mony','ate','boar','t']))  //true
 console.log(canConstructTabulation('alimony', ['al','mony','i','boar','t']))  //true
